@@ -1,7 +1,7 @@
 
 # Authors
 
-alessio.innocenzi@studio.unibo.it
+alessio.innocenzi@studio.unibo.it  
 simone.preite@studio.unibo.it
 
 # Description
