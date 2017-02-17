@@ -18,38 +18,18 @@ that implements the Google Material Design
 
 ## Usage
 
+## Pip installation
+
+Download get-pip.py from here: https://bootstrap.pypa.io/get-pip.py  
+`cd /path/to/get-pip.py`  
+`python get-pip.py` 
+
 ### Method 1
 
 `sudo pip install virtualenv`  
 `git clone https://github.com/aleinnocenzi/EasyRASH.git`  
 `cd ./EasyRASH`  
 `virtualenv --python python3 venv`  
-`. venv/bin/activate`  
-`gunicorn --bind 0.0.0.0:10000 wsgi:app`  
-
-### Method 2
-
-`git clone https://github.com/aleinnocenzi/EasyRASH.git`  
-`cd ./EasyRASH`  
-`gunicorn --bind 0.0.0.0:10000 wsgi:app`  
-
-## Pip installation
-
-Download get-pip.py from here: https://bootstrap.pypa.io/get-pip.py  
-`cd /path/to/get-pip.py`  
-`python get-pip.py`  
-
-## Project dependencies
-
-This project uses a lot of python module such as flask extensions.
-Please install theese modules with the following command:
-
-`sudo pip install <DEPENDENCY>`
-
-DEPENDENCIES:  
-`flask`  
-`flask_login`  
-`flask_mail`  
-`passlib`  
-`grip`  
-`gunicorn`  
+`. venv/bin/activate` 
+`pip install flask flask_mail flask_login passlib grip gunicorn`  
+`gunicorn --bind 0.0.0.0:10000 wsgi:app`   
