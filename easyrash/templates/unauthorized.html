@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>401 UNAUTHORIZED</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		img {
+			margin:auto;
+		}
+
+		h2, h4 {
+			font-family: 'Asap', sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid text-center">
+		<img class='img-responsive text-center' src='{{ url_for("static", filename="assets/png/401.png") }}' />
+		<h2>Sorry, you must be logged in to get into here</h2>
+		<h4>Please, login at <a href='/login'>this page</a> to enjoy EasyRASH</h4>
+	</div>
+</body>
+</html>

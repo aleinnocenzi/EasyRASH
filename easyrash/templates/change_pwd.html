@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+  <meta id="user" data-name="{{mail}}">
+	<title>Login EasyRASH</title>
+	<link rel="icon" href="{{ url_for('static',filename='assets/favicon.ico') }}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='css/login.css') }}">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<script scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="{{ url_for('static',filename='js/change_pwd.js') }}"></script>
+
+</head>
+
+<body>
+	<div class="container-fluid page-container">
+		<div class="login-page">
+			<div class="form">
+				<form class="login-form" id="form-reset" method="POST">
+					<h2 class="welcome-message">Change password</h2>
+					<div class="input-container">
+						<span id="passwd_" class="compulsory compulsory-hidden">This field is compulsory</span>
+						<input id="passwd" type="password" placeholder="password"/>
+						<span id="conf_passwd_" class="compulsory compulsory-hidden">This field is compulsory</span>
+						<input id="conf_passwd" type="password" placeholder="confirm password"/>
+						<p id="not_match">PASSWORDS DON'T MATCH</p>
+						<button type="button" id="reset">RESET</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

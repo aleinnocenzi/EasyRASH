@@ -1,0 +1,30 @@
+<md-dialog aria-label="Unsaved comment list">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2><i class="material-icons" style="vertical-align: middle; font-size: 27px;">description</i> Current review</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="close()">
+          <md-icon md-svg-src="static/assets/svg/close.svg" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-dialog-content>
+    <div class="md-dialog-content">
+      <div id="unsaved-list">
+        <table class="show-unsaved-table">
+          <thead>
+            <th>Fragment</th>
+            <th>Annotation</th>
+          </thead>
+          <tbody>
+            <tr ng-repeat="x in comment_list">
+              <td>{a x.text a}</td>
+              <td>{a x.comment a}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </md-dialog-content>
+</md-dialog>

@@ -1,0 +1,26 @@
+<md-dialog aria-label="Comment modal">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2><i class="material-icons" style="vertical-align: middle; font-size: 20px;">mode_comment</i> Annotation</h2>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content" style="text-align:center;">
+        <div class="raleway">
+          <hr>
+          <h3 ng-model="c_comment">{a r_author a}</h3>
+          <hr>
+          <h3>Fragment: {a selected a}</h3>
+          <hr>
+          <h3 ng-model="c_comment">Annotation: {a r_comment a}</h3>
+          <hr>
+        </div>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button ng-click="close()">Close</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

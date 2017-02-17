@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 NOT FOUND</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		img {
+			margin:auto;
+		}
+
+		h2, h4 {
+			font-family: 'Asap', sans-serif;
+		}
+
+		h2 {
+			font-size: 250%;
+			font-weight: bold;
+		}
+
+		h4 {
+			color: #6f6f6f;
+		}
+
+		img {
+			width: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid text-center">
+		<img class='img-responsive text-center' src='{{ url_for("static", filename="assets/svg/404.svg") }}' />
+		<h2>Oooops, looks like a ghost!</h2>
+		<h4>The page <code>{{current_url}}</code> cannot be found on this server</h4>
+	</div>
+</body>
+</html>

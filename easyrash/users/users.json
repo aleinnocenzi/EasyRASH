@@ -1,0 +1,210 @@
+{
+    "Angelo Di Iorio <angelo.diiorio@unibo.it>": {
+        "pass": "$1$p3D1gg6t$JcBqQTbZkOrzBF6.dgG/l.",
+        "given_name": "Angelo",
+        "family_name": "Di Iorio",
+        "email": "angelo.diiorio@unibo.it",
+        "sex": "male",
+        "comment_id": "DAM6259"
+    },
+    "Jessica Jones <jessica.jones@alias.com>": {
+        "pass": "$1$8tKA/F5I$/296eX0WvjcgG0QsgxlvQ0",
+        "given_name": "Jessica",
+        "family_name": "Jones",
+        "email": "jessica.jones@alias.com",
+        "sex": "female",
+        "comment_id": "JJF8459"
+    },
+    "John Constantine <john.constantine@hell.com>": {
+        "pass": "$1$10ONEWJr$2JZLoh/eM5Kc3ZRZmFWqt0",
+        "given_name": "John",
+        "family_name": "Constantine",
+        "email": "john.constantine@hell.com",
+        "sex": "male",
+        "comment_id": "CJM9874"
+    },
+    "Alex Wade <alex.wade@example.com>": {
+        "pass": "$1$UHKznuQP$KR.JXyEwmCcvacy1tkix7/",
+        "given_name": "Alex",
+        "family_name": "Wade",
+        "email": "alex.wade@example.com",
+        "sex": "male",
+        "comment_id": "WAM3954"
+    },
+    "Raffaele Giannella <raffaele.giannella@example.com>": {
+        "pass": "$1$GRlTs8kQ$ulF.UfGVkDIeCi8W9YB6v/",
+        "given_name": "Raffaele",
+        "family_name": "Giannella",
+        "email": "raffaele.giannella@example.com",
+        "sex": "male",
+        "comment_id": "GRM3521"
+    },
+    "Arthur Dent <arthur.dent@fish.com>": {
+        "pass": "$1$ndOApVQc$lcLTE1dTiEO8dk8eMLy6D/",
+        "given_name": "Arthur",
+        "family_name": "Dent",
+        "email": "arthur.dent@fish.com",
+        "sex": "male",
+        "comment_id": "DAM7246"
+    },
+    "Lyra Belacqua <lyra.belacqua@ox.com>": {
+        "pass": "$1$R.HYaPuH$pXxezAeK0eL6/bxAIjAgN1",
+        "given_name": "Lyra",
+        "family_name": "Belacqua",
+        "email": "lyra.belacqua@ox.com",
+        "sex": "female",
+        "comment_id": "BLF6453"
+    },
+    "Francesco Osborne <francesco.osborne@example.com>": {
+        "pass": "$1$KRXXOZZ3$McMP9OogirrPP2vIJzHNJ.",
+        "given_name": "Francesco",
+        "family_name": "Osborne",
+        "email": "francesco.osborne@example.com",
+        "sex": "male",
+        "comment_id": "OFM9856"
+    },
+    "Christoph Lange <math.semantic.web@example.com>": {
+        "pass": "$1$sNWoGALD$6BgNc/sfK1kL2nw8YNMRv1",
+        "given_name": "Christoph",
+        "family_name": "Lange",
+        "email": "math.semantic.web@example.com",
+        "sex": "male",
+        "comment_id": "LCM6297"
+    },
+    "Tobias Kuhn <tokuhn@example.com>": {
+        "pass": "$1$bs3S1RyI$.mBQWnWVxdsj7ETSTqgE70",
+        "given_name": "Tobias",
+        "family_name": "Kuhn",
+        "email": "tokuhn@example.com",
+        "sex": "male",
+        "comment_id": "KTM6574"
+    },
+    "Jun Zhao <j.zhao5@example.com>": {
+        "pass": "$1$iwQRbGyH$yBxk654pQP9u8S/Rs.qbS0",
+        "given_name": "Jun",
+        "family_name": "Zhao",
+        "email": "j.zhao5@example.com",
+        "sex": "female",
+        "comment_id": "ZJF4532"
+    },
+    "Alice Liddell <alice.liddell@whiterabbit.com>": {
+        "pass": "$1$wy2sjado$XKTj6/tzTgGMB7rENzh8g1",
+        "given_name": "Alice",
+        "family_name": "Liddell",
+        "email": "alice.liddell@whiterabbit.com",
+        "sex": "female",
+        "comment_id": "LAF9633"
+    },
+    "Paolo Manghi <paolo.manghi@example.com>": {
+        "pass": "$1$qC4L8CJN$3n84zyWOfC6zp9Z6BVT620",
+        "given_name": "Paolo",
+        "family_name": "Manghi",
+        "email": "paolo.manghi@example.com",
+        "sex": "male",
+        "comment_id": "MPM6587"
+    },
+    "Anastasia Dimou <anastasia.dimou@example.com>": {
+        "pass": "$1$qn/Je3w9$kKdJ9gQfnZnniei1LIbKv0",
+        "given_name": "Anastasia",
+        "family_name": "Dimou",
+        "email": "anastasia.dimou@example.com",
+        "sex": "female",
+        "comment_id": "DAF6985"
+    },
+    "Fabio Vitali <fabio.vitali@unibo.it>": {
+        "pass": "$1$MB/OVa2n$v2cnZKmeZFSRzbDlGUuQu/",
+        "given_name": "Fabio",
+        "family_name": "Vitali",
+        "email": "fabio.vitali@unibo.it",
+        "sex": "male",
+        "comment_id": "VFM9593"
+    },
+    "Silvio Peroni <silvio.peroni@unibo.it>": {
+        "pass": "$1$rTbrTo4C$1j.qsShk/aQAYazizGXuw0",
+        "given_name": "Silvio",
+        "family_name": "Peroni",
+        "email": "silvio.peroni@unibo.it",
+        "sex": "male",
+        "comment_id": "PSM1485"
+    },
+    "Sahar Vahdati <vahdati@example.com>": {
+        "pass": "$1$4pdo1OfN$9ORdLU/e9BypD5SONEsvV1",
+        "given_name": "Sahar",
+        "family_name": "Vahdati",
+        "email": "vahdati@example.com",
+        "sex": "female",
+        "comment_id": "VSF1234"
+    },
+    "Alessia Bardi <alessia.bardi@example.com>": {
+        "pass": "$1$K.kR8G0w$acyQM0LolqGKx/0FSq1wC.",
+        "given_name": "Alessia",
+        "family_name": "Bardi",
+        "email": "alessia.bardi@example.com",
+        "sex": "female",
+        "comment_id": "BAF3256"
+    },
+    "Paul Groth <p.groth@example.com>": {
+        "pass": "$1$k5yiB5ek$ch.qONUnjTxESpQlxv/k6.",
+        "given_name": "Paul",
+        "family_name": "Groth",
+        "email": "p.groth@example.com",
+        "sex": "male",
+        "comment_id": "GPM4568"
+    },
+    "Francesco Poggi <francesco.poggi5@unibo.it>": {
+        "pass": "$1$fli3FtQ.$gdhR9a85evjlzJPjLmBOg1",
+        "given_name": "Francesco",
+        "family_name": "Poggi",
+        "email": "francesco.poggi5@unibo.it",
+        "sex": "male",
+        "comment_id": "PFM4211"
+    },
+    "Alejandra Gonzalez-Beltran <alejandra.gonzalezbeltran@example.com>": {
+        "pass": "$1$hg3wxkJQ$Ur24HXbOsmuiGzS9NhKTf0",
+        "given_name": "Alejandra",
+        "family_name": "Gonzalez-Beltran",
+        "email": "alejandra.gonzalezbeltran@example.com",
+        "sex": "female",
+        "comment_id": "GAF1245"
+    },
+    "Andrea Nuzzolese <andrea.nuzzolese@example.com>": {
+        "pass": "$1$upupbUhF$KZVQMXTPWEEozKhiq86gg1",
+        "given_name": "Andrea",
+        "family_name": "Nuzzolese",
+        "email": "andrea.nuzzolese@example.com",
+        "sex": "male",
+        "comment_id": "NAM6584"
+    },
+    "Arabella Strange <arabella.strange@york.com>": {
+        "pass": "$1$lCBWaRgv$E9Cnu1L9ucWcNg1S.SqwJ.",
+        "given_name": "Arabella",
+        "family_name": "Strange",
+        "email": "arabella.strange@york.com",
+        "sex": "female",
+        "comment_id": "SAF1953"
+    },
+    "Michael Smith <mike@example.com>": {
+        "pass": "$1$L6nryJwr$UMM.xXAzbDrSCabQRah9x0",
+        "given_name": "Michael",
+        "family_name": "Smith",
+        "email": "mike@example.com",
+        "sex": "male",
+        "comment_id": "SMM85452"
+    },
+    "Paolo Ciancarini <paolo.ciancarini@example.com>": {
+        "pass": "$1$7hZfAfGh$L/3b2cA6ACKQttSFGn/8Q/",
+        "given_name": "Paolo",
+        "family_name": "Ciancarini",
+        "email": "paolo.ciancarini@example.com",
+        "sex": "male",
+        "comment_id": "CPM2548"
+    },
+    "Vanessa Ives <vanessa.ives@hell.com>": {
+        "pass": "$1$oDAxr.7B$v/uUEdJBI01UOyEou58CW.",
+        "given_name": "Vanessa",
+        "family_name": "Ives",
+        "email": "vanessa.ives@hell.com",
+        "sex": "female",
+        "comment_id": "IVF5622"
+    }
+}

@@ -1,0 +1,107 @@
+<html>
+    <head>
+
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/rash.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <title>GET STARTED</title>
+
+    </head>
+    <body>
+        <header style="text-align: center;font-family: 'Nunito', sans-serif;">
+            <h1><b>EasyRASH</b></h1>
+            <h2>GET STARTED</h2>
+            <div style="display: inline-block;text-align: left;">
+                <ul style="list-style-type: none; padding:0;">
+                    <li><a href="#tut1">1. What is RASH</a></li>
+                    <li><a href="#tut2">2. What is EasyRASH</a></li>
+                    <li><a href="#tut3">3. Roles</a></li>
+                    <li><a href="#tut4">4. Actions and interfaces</a>
+                        <ul>
+                            <li style="list-style-type: none;"><a href="#tut4-1">4.1 Reader</a></li>
+                            <li style="list-style-type: none;"><a href="#tut4-2">4.2 Annotator</a></li>
+                            <li style="list-style-type: none;"><a href="#tut4-3">4.3 Chair</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#tut5">5. Allowed selections</a></li>
+                </ul>
+            </div>
+        </header>
+        <div>
+            <p style="font-size: 115%;font-family: 'Nunito', sans-serif;">
+                <a id="tut1"></a>
+                <b>1. What is RASH?</b> Acronym for Research Article in Semplified HTML, RASH is a standardized HTML for scientific publications. 
+            </p>
+            <p style="font-size: 115%;font-family: 'Nunito', sans-serif;">
+                <a id="tut2"></a>
+                <b>2. What is EasyRASH?</b> It's overall a web application with which is possible to make annotations on RASH articles. In the scientific community articles must be approved before the effective publication. EasyRASH provides all the tools for a complete peer review process:<br/>author writes the article and submit it to the review of other people. The <i><b>reviewers</b></i> can make annotations on the text and can provide a general judgement on the article. Finally there is the so-called <i><b>chair</b></i>, who can accept or reject the article.
+            </p>
+            <p style="font-size: 115%;font-family: 'Nunito', sans-serif;">
+                <a id="tut3"></a>
+                <b>3. Roles.</b> There are mainly 3 roles:
+                    <ul>
+                        <li style="font-size: 115%;font-family: 'Nunito', sans-serif;"><i>Reader (passive user)</i>: can read the article</li>
+                        <li style="font-size: 115%;font-family: 'Nunito', sans-serif;"><i>Annotator (active user)</i>: can make annotations and submit review</li>
+                        <li style="font-size: 115%;font-family: 'Nunito', sans-serif;"><i>Chair (active user)</i>: expresses the final judgment (accepted or rejected)</li>
+                    </ul> 
+            </p>
+            <p style="font-size: 115%;font-family: 'Nunito', sans-serif;">
+                EasyRASH manages all of them.
+            </p>
+            <p style="font-size: 115%;font-family: 'Nunito', sans-serif;">
+                <a id="tut4"></a>
+                <b>4. Actions and interfaces.</b> The allowed actions are related to your role, so, each role has a different interface:
+            </p>
+            <div style="font-size: 115%;font-family: 'Nunito', sans-serif;">
+                 <a id="tut4-1"></a>
+                <p>The <b>reader</b> has the simplest interface, since he can only read the article.</p>
+                <div style="border: 3px solid;">
+                    <img src="/static/assets/png/howto4.png" />
+                </div>
+                <p>If the user is only reader, hitting the button [1] will have no effect</p>
+            </div>
+            <div style="font-size: 115%;font-family: 'Nunito', sans-serif;">
+                <a id="tut4-2"></a>
+                <p>The below image instead represents the <b>annotator</b> interface</p>
+                <div style="border: 3px solid;">
+                    <img src="/static/assets/png/howto5.png" />
+                </div>
+                <p>The following actions will be performed hitting the buttons:</p>
+                <ul>
+                    <li style="list-style-type: none;">2: if a fragment of text has been selected, this button opens a modal dialog in which the annotator can write a comment to the selected text.</li>
+                    <li style="list-style-type: none;">3: if the annotator has made at least one comment, this button opens a modal dialog in which the user can give a <i>general judgment</i>, a <i>rating</i> from 1 to 5, and his opinion if the article should be <i>accepted or rejected</i>. Then clicking the <i>save</i> button, the review will be submitted, and that user will not make annotation anymore (to that article).</li>
+                    <li style="list-style-type: none;">4: if the annotator has made at least one comment, this button opens a modal dialog in which there is a summary of the unsaved annotations.</li>
+                    <li style="list-style-type: none;">5: hitting this button will deactivate the annotator interface and the reader interface will be reactivated. This also cause the loss of all unsaved changes.</li>
+                </ul> 
+            </div>
+            <div style="font-size: 115%;font-family: 'Nunito', sans-serif;">
+                <a id="tut4-3"></a>
+                <p>And finally there is the <b>chair</b> interface:</p>
+                <div style="border: 3px solid;">
+                    <img src="/static/assets/png/howto6.png" />
+                </div>
+                <p>The following actions will be performed hitting the buttons:</p>
+                <ul>
+                    <li style="list-style-type: none;">6: if all the reviewers have completed their reviews, this button opens a modal dialog in which the chair can accept or reject the article definitively.</li>
+                    <li style="list-style-type: none;">7: this button opens a modal dialog in which the chair can read all the submitted reviews.</li>
+                </ul> 
+            </div>
+            <p style="font-size: 115%;font-family: 'Nunito', sans-serif;">
+                <a id="tut5"></a>
+                <b>5. Allowed selections.</b> When the annotator performs a selection on the text and tries to make an annotation on that fragment, it may occurs the <span style="color: orangered">selection not allowed</span> error. This because not every parts of the document are annotable. Therefore let's list the parts of the document which can raise that error:
+            </p>
+            <ul style="font-size: 115%;font-family: 'Nunito', sans-serif;">
+                <li>The header: the title, the informations about the authors, the keywords etc... are not annotable. (All parts before the <i>abstract</i> section).</li>
+                <li>The references and the footnotes at the bottom of the documents</li>
+                <li>A selection that includes 2 or more differents paragraphs</li>
+                <li>A selection that includes the section title and the following paragraph</li>
+                <li>A selection that split the links, the sentences (or words) in bold, the words in red and the anchors. If you want to annotate them, you must select the entire word/sentence.</li>
+                <li>A selection that includes one or more images.</li>
+                <li>A selection that includes the bold part in the captions</li>
+            </ul>
+            <p style="font-size: 115%;font-family: 'Nunito', sans-serif;">Most of theese limitations are due to the following cause: a lot of the parts of the RASH articles are generated on the client, so they can't be saved in the server, and all the annotations to the client-side generated parts, would be lost.</p>
+        </div>
+    </body>
+</html>

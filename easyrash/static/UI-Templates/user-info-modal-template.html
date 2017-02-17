@@ -1,0 +1,55 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2><i style="vertical-align: middle;width: 28px; height: 28px;" class="material-icons">settings</i> User information</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="close()">
+          <md-icon md-svg-src="static/assets/svg/close.svg" aria-label="Close user information modal"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content style="max-width:800px;max-height:810px; padding: 50px;">
+      <div id="information" ng-show="!pwd_form">
+        <h1 class="md-display-2" style="font-size:25px;">{a name a} <md-icon md-svg-src="static/assets/svg/annotator_black.svg"></md-icon></h1>
+        <p>Email: <b>{a email a}</b></p>
+        <p>Password: &#x25cf;&#x25cf;&#x25cf;&#x25cf;&#x25cf;&#x25cf; <span id="change-pwd-span" ng-click="pwd_form = !pwd_form">Change</span></p>
+        <div class="flex-container" ng-if="author.length != 0">
+          <p style="flex: 0 0 100%;">Author of:</p>
+          <div class="title-postit" ng-repeat="x in author">{a x a}</div>
+        </div>
+        <div class="flex-container" ng-if="chair.length != 0">
+          <p style="flex: 0 0 100%;">Chair of:</p>
+          <div class="title-postit" ng-repeat="x in chair">{a x.acronym a}</div>
+        </div>
+        <div class="flex-container" ng-if="reviewer.length != 0">
+          <p style="flex: 0 0 100%;">Reviewer of:</p>
+          <div class="title-postit" ng-repeat="x in reviewer">{a x a}</div>
+        </div>
+      </div>
+      <div id="change-pwd" ng-show="pwd_form">
+        <h1 class="md-display-2" style="font-size: 25px;">Reset password <md-icon md-svg-src="static/assets/svg/annotator_black.svg"></md-icon></h1>
+        <form>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Old password</label>
+            <input type="password" ng-model="old_pwd"/>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>New password</label>
+            <input type="password" ng-model="new_pwd"/>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Confirm new password</label>
+            <input type="password" ng-model="confirm_new_pwd" />
+          </md-input-container>
+          <div id="change-pwd-actions" layout="row">
+            <md-button class="md-raised md-warn" style="width:50%;" ng-click="pwd_form = !pwd_form">CANCEL</md-button>
+            <md-button class="md-raised md-primary" style="width:50%;" ng-click="reset()">RESET</md-button>
+          </div>
+        </form>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+    </md-dialog-actions>
+  </form>
+</md-dialog>

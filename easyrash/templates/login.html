@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Login EasyRASH</title>
+	<link rel="icon" href="{{ url_for('static',filename='assets/favicon.ico') }}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+	<link rel="stylesheet" type='text/css' href="{{ url_for('static',filename='css/login.css') }}">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<script type="text/javascript" scr="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="{{ url_for('static',filename='js/login.js') }}"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#easter").click(function(){
+				if($("#developers").css("display") == "none"){
+					$("#form-s").hide();
+					$("#form-l").hide();
+					$("#form-r").hide();
+					$("#developers").animate({height: "toggle", opacity: "toggle"}, "slow");;
+				}
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+<div id="easter"></div>
+<div class="container-fluid page-container">
+	<div class="login-page">
+		<div class="form">
+			<form class="restore-password" id="form-r" method="POST">
+				<h4 class="welcome-message">Help</h4>
+				<div class="input-container">
+					<!-- r- is for restore-->
+					<span id="r-mail_" class="compulsory compulsory-hidden">This field is compulsory</span>
+					<input id="r-mail" type="email" placeholder="email" />
+					<p id="not-exist" style="display: none; color: red; font-size: 200%;">This email isn't registered in the system</p>
+					<button type="button" id="recupera">SEND</button>
+				</div>
+				<p class="message">Already have an account <a id="back-login" href="#">Login</a></p>
+			</form>
+			<form class="register-form" id="form-s">
+				<h2 class="welcome-message">Registration</h2>
+				<div class="input-container">
+					<!-- s- is for signup-->
+					<span id="s-nome_" class="compulsory compulsory-hidden">This field is compulsory</span>
+					<input id="s-nome" type="text" placeholder="name" />
+					<span id="s-cognome_" class="compulsory compulsory-hidden">This field is compulsory</span>
+					<input id="s-cognome" type="text" placeholder="surname" />
+					<span id="s-mail_" class="compulsory compulsory-hidden">This field is compulsory</span>
+					<input id="s-mail" type="email" placeholder="email" />
+					<select id="s-sesso" class="form-control">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+					<span id="s-passwd_" class="compulsory compulsory-hidden">This field is compulsory</span>
+					<input id="s-passwd" type="password" placeholder="password" />
+					<span id="s-conferma_passwd_" class="compulsory compulsory-hidden">This field is compulsory</span>
+					<input id="s-conferma_passwd" type="password" placeholder="confirm password" />
+					<p id="u-exists" style="display: none; color: red; font-size: 200%;">This email is already associated to an account</p>
+					<p id="p-different" style="display: none; color: red; font-size: 200%;">The passwords don't match</p>
+					<button type="button" id="signup">SIGN UP</button>
+				</div>
+				<p class="message">Already have an account <a id="back-login" href="#">Login</a></p>
+			</form>
+			<form class="login-form" id="form-l" method="POST">
+				<h2 class="welcome-message">Welcome</h2>
+				<div class="input-container">
+					<!-- c- is for login-->
+					<span id="l-mail_" class="compulsory compulsory-hidden">This field is compulsory</span>
+					<input id="l-mail" type="email" placeholder="email"/>
+					<span id="l-login_passwd_" class="compulsory compulsory-hidden">This field is compulsory</span>
+					<input id="l-login_passwd" type="password" placeholder="password"/>
+					<p id="unauthorized">WRONG CREDENTIALS</p>
+					<button type="button" id="accedi">LOGIN</button>
+					<p class="message">You haven't an account? <a id="subscribe" href="#">Sign up</a></p>
+					<p class="reset">Forgot password? <a id="rescue" href="#">Help</a></p>
+				</div>
+			</form>
+			<div id="developers" style="display: none;">
+				<h1 class="welcome-message" style="font-family: 'PT Mono', monospace;">DEVELOPERS</h1>
+				<div class="row dev-img-row">
+					<img class="col-sm-6 img-circle" src="static/assets/jpg/dev1.jpg" />
+					<img class="col-sm-6 img-circle" src="static/assets/jpg/dev2.jpg" />
+				</div>
+				<p class="message" style="font-family: 'PT Mono', monospace;"><a id="fd">Back</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

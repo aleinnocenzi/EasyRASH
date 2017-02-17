@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyRASH</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<!--Angular Material CSS -->
+	<link rel="icon" href="{{ url_for('static',filename='assets/favicon.ico') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css" />
+
+	<!--Google Material Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/stile.css') }}" />
+
+	<!-- jQuery CDN -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Angular Material requires Angular.js Libraries -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+
+	<!-- Angular Material Library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+
+	<!-- Custom JS -->
+
+	<script src="{{ url_for('static',filename='js/functions.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/app.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/reverse.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/controllers/main.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/controllers/UserInterfaceCtrl.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/controllers/UserModalCtrl.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/controllers/ReaderAnnotatorToastCtrl.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/controllers/MessageToastCtrl.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/controllers/CommentCtrl.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/controllers/SummaryReviewsCtrl.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/controllers/SaveCtrl.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/controllers/UnsavedCtrl.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/controllers/ChairCtrl.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/directives/directives.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/factory/main.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/factory/Article.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/factory/Userinfo.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/factory/API_HUB.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/factory/Message.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/factory/Comment.js') }}"></script>
+
+</head>
+<body ng-app="easyRash" ng-controller="UserInterfaceCtrl" layout="column">
+	<div id="loading"></div>
+	<md-toolbar class="md-toolbar-tools" layout="row">
+		<md-button class="menu" hide-gt-sm ng-click="toggleSidenav()" aria-label="sidenav">
+			<md-icon md-svg-src='{{ url_for("static", filename="assets/svg/menu.svg") }}'></md-icon>
+		</md-button>
+		<h1>EASYRASH </h1>
+		<span flex></span>
+	</md-toolbar>
+
+	<div layout="row" flex>
+		<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-sidenav-left md-whiteframe-6dp" md-component-id="left">
+			<md-list layout="column">
+				<md-list-item layout="column" id="user-info-container">
+					{% if data.user_data.sex == "male" %}
+					<md-icon id="user-avatar" md-svg-src='{{ url_for("static", filename="assets/svg/avatar-uomo.svg") }}' ></md-icon>
+					{% elif data.user_data.sex == "female" %}
+					<md-icon id="user-avatar" md-svg-src='{{ url_for("static", filename="assets/svg/avatar-donna.svg") }}' ></md-icon>
+					{% endif %}
+					<div id="user-info">
+						<p id='nome'>{{data.user_data.given_name}} {{data.user_data.family_name}}</p>
+						<p id='email'>{{data.user_data.email}}</p>
+						<i class="material-icons" ng-click="closeSidenavSections()" id="arrow-user" slide-toggle="#settings" >keyboard_arrow_down</i>
+					</div>
+					<div id="gradient"></div>
+					<md-divider></md-divider>
+				</md-list-item>
+				<div>
+					<md-list id="settings" layout="column" class="slideable" duration="0.3s">
+						<md-button aria-label="profile" ng-click="userInfoModal()">
+							<md-icon class="setting-icon" md-svg-src="static/assets/svg/user-settings.svg"></md-icon> My profile
+						</md-button>
+						<md-button aria-label="logout" ng-click='confirmLogout($event)' >
+							<md-icon class="setting-icon" md-svg-src="static/assets/svg/logout-settings.svg"></md-icon> Logout
+						</md-button>
+					</md-list>
+				</div>
+				<md-divider></md-divider>
+				<div>
+					<md-list layout="column" id="navigation">
+						<md-list-item ng-if="my">
+							<md-button layout="row" id="mypapers" slide-toggle="#i-miei-articoli" aria-label="articles" class="main-sidenav-button">
+								<span class="material-icons nav-icons">star_rate</span>
+								<p>MY PAPERS</p>
+							</md-button>
+						</md-list-item>
+						<md-list id="i-miei-articoli" class="slideable" duration="0.3s" >
+							{% for article in data.user_articles %}
+							<md-list-item>
+								<div>
+									<a id="{{article.url}}" ng-click="loadRASH('{{article.title}}', '{{article.url}}')" title="{{article.title}}">{{article.title|striptags|truncate(50)}}</a>
+								</div>
+							</md-list-item>
+							{% endfor %}
+						</md-list>
+						<md-list-item>
+							<md-button id="userconference" layout="row" slide-toggle="#lista-conferenze" aria-label="articles" class="main-sidenav-button">
+								<span class="material-icons nav-icons">view_list</span>
+								<p>EVENTS</p>
+							</md-button>
+						</md-list-item>
+						<md-list id="lista-conferenze" class="slideable" duration="0.3s" >
+							{% for conference in data.conferences %}
+							<md-list-item title="{{conference.conference}}">
+								<p class="bolded" inner-slide-toggle="#article_list_{{loop.index}}">{{ conference.acronym }}</p>
+								<span flex></span>
+								{% for chair in conference.chairs %}
+									{% if data.key == chair %}
+									<i class="material-icons">
+										<md-tooltip md-direction="top">You are chair</md-tooltip>gavel
+									</i>
+									{% endif %}
+								{% endfor %}
+							</md-list-item>
+								<md-list id="article_list_{{loop.index}}" class="articoli-conferenza slideable" duration="0.3s">
+								{% for article in conference.submissions %}
+									<md-list-item>
+										<a ng-click="loadRASH('{{article.title}}', '{{article.url}}')" title="{{article.title}}">{{article.title|striptags|truncate(50)}}
+										</a>
+										{% for reviewer in article.reviewers %}
+											{% if data.key == reviewer %}
+											<span flex></span>
+											<i class="material-icons">
+												<md-tooltip md-direction="top">You are reviewer</md-tooltip>create
+											</i>
+											{% endif %}
+										{% endfor %}
+									</md-list-item>
+								{% endfor %}
+								</md-list>
+							{% endfor %}
+						</md-list>
+						<md-list-item>
+							<md-button id="tutorial" layout="row" aria-label="tutorial" class="main-sidenav-button" ng-click="loadRASH('Help', 'tutorial.html')">
+								<span class="material-icons nav-icons">help</span>
+								<p>HELP</p>
+							</md-button>
+						</md-list-item>
+					</md-list>
+				</div>
+			</md-list>
+		</md-sidenav>
+		<md-content flex layout="column" ng-cloak>
+			<div ng-if="tabs.length == 0" id="wallpaper-md-content" flex>
+				<img src="/static/assets/png/wallpaper-md-content-bw.png" />
+				<h1 class="raleway">EasyRASH <i style="font-size: 45px;vertical-align: middle;" class="material-icons">keyboard_arrow_right</i> </h1>
+				<div class="raleway start-screen">
+					<md-button ng-click="showAlert($event, 'OPEN', 'Select one or more articles from the left menu', 'YUP')">OPEN</md-button>
+					<md-button ng-click="showAlert($event, 'REVIEW', 'Switch to annotator and make annotations on the article', 'CLEAR')">REVIEW</md-button>
+					<md-button ng-click="showAlert($event, 'SAVE', 'Save your annotations submitting your review', 'I AM READY')">SAVE</md-button>
+				</div>
+			</div>
+			<md-tabs id="{a $index a}" ng-show="tabs.length > 0" flex md-selected="selectedIndex" md-border-bottom md-autoselect>
+				<md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" >
+					<md-tab-label>
+						{a tab.title|limitTo:10 a}{a tab.title.length > 10 ? '...' : '' a}
+						<i class="material-icons close-tab" id="closetab{a$indexa}" ng-click="removeRASH(tab)">clear</i>
+					</md-tab-label>
+					<md-tab-body>
+						<div id="rash-view-{a$indexa}" style="padding:20px;"></div>
+					</md-tab-body>
+				</md-tab>
+			</md-tabs>
+			<div id="action-container" layout="row" ng-if="tabs.length > 0">
+				<div id="ra-action" ng-if="ra">
+					<md-button ng-if="annotator" class="md-fab rash-action" ng-click="comment()" aria-label="comment">
+						<md-tooltip md-direction="top">Comment</md-tooltip>
+						<md-icon md-svg-src="static/assets/svg/comment.svg"></md-icon>
+					</md-button>
+					<md-button ng-if="annotator" class="md-fab md-warn rash-action" ng-disabled="unsaved_comment"  ng-click="saveModal()" aria-label="save">
+						<md-tooltip md-direction="top">Save</md-tooltip>
+						<md-icon md-svg-src="static/assets/svg/save.svg"></md-icon>
+					</md-button>
+					<md-button ng-if="annotator" class="md-fab md-primary rash-action" ng-click="unsavedModal()" ng-disabled="unsaved_comment"  aria-label="unsaved comment list">
+						<md-tooltip md-direction="top">Unsaved comment list</md-tooltip>
+						<md-icon md-svg-src="static/assets/svg/comment-list.svg"></md-icon>
+					</md-button>
+					<md-button ng-if="annotator" class="md-fab md-primary rash-action" ng-click="toggleReaderAnnotatorChair()" aria-label="switch to reader">
+						<md-tooltip md-direction="top">Switch to reader</md-tooltip>
+						<md-icon md-svg-src="static/assets/svg/reader.svg"></md-icon>
+					</md-button>
+					<md-button class="md-fab md-primary rash-action" ng-if="!annotator" ng-click="toggleReaderAnnotatorChair()" aria-label="switch to annotator">
+						<md-tooltip md-direction="top">Switch to annotator</md-tooltip>
+						<md-icon md-svg-src="static/assets/svg/annotator.svg"></md-icon>
+					</md-button>
+				</div>
+				<div id="chair-action" ng-if="ch">
+					<div ng-if="decided">
+						<md-button class="md-fab rash-action" aria-label="accepted" ng-if="accepted">
+							<md-tooltip md-direction="top">Accepted</md-tooltip>
+							<md-icon><i class="material-icons">done_all</i></md-icon>
+						</md-button>
+						<md-button class="md-fab rash-action" aria-label="rejected" ng-if="!accepted">
+							<md-tooltip md-direction="top">Rejected</md-tooltip>
+							<md-icon><i class="material-icons">close</i></md-icon>
+						</md-button>
+					</div>
+					<md-button ng-if="!decided" class="md-fab rash-action" ng-disabled="not_all_rev" aria-label="accept/reject" ng-click="chairModal()">
+						<md-tooltip md-direction="top">Accept/Reject</md-tooltip>
+						<md-icon md-svg-src="static/assets/svg/chair-judgement.svg"></md-icon>
+					</md-button>
+					<md-button class="md-fab md-warn rash-action" aria-label="view reviews" ng-click="summaryReviewsModal()">
+						<md-tooltip md-direction="top">View reviews</md-tooltip>
+						<md-icon md-svg-src="static/assets/svg/comment-list.svg"></md-icon>
+					</md-button>
+				</div>
+			</div>
+		</md-content>
+	</div>
+</body>
+</html>
