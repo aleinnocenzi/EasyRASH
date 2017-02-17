@@ -16,7 +16,7 @@ Developed using python and Flask framework for the backend, and angularjs for th
 UI is built following Material Design guidelines and using Angular Material, an angular module 
 that implements the Google Material Design
 
-### Usage
+# Usage
 
 Download get-pip.py (if you don't have pip already installed) from here: https://bootstrap.pypa.io/get-pip.py  
 `cd /path/to/get-pip.py`  
