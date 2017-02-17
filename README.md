@@ -24,12 +24,12 @@ Download get-pip.py (if you don't have pip already installed) from here: https:/
 
 ## Installation
 
-*`sudo pip install virtualenv`  
-*`git clone https://github.com/aleinnocenzi/EasyRASH.git`  
-*`cd ./EasyRASH`  
-*`virtualenv --python python3 venv`  
-*`. venv/bin/activate`  
-*`pip install flask flask_mail flask_login passlib grip gunicorn`  
-*`gunicorn --bind 0.0.0.0:10000 wsgi:app`  
+* `sudo pip install virtualenv`  
+* `git clone https://github.com/aleinnocenzi/EasyRASH.git`  
+* `cd ./EasyRASH`  
+* `virtualenv --python python3 venv`  
+* `. venv/bin/activate`  
+* `pip install flask flask_mail flask_login passlib grip gunicorn`  
+* `gunicorn --bind 0.0.0.0:10000 wsgi:app`  
 
 Go to `localhost:10000` into the browser and enjoy EasyRASH 
