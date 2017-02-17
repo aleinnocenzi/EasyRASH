@@ -11,10 +11,9 @@ This web application provides all tools for a complete peer review process: from
 
 # Technical details
 
-Academic project developed for the course of Web Techologies.
-Developed using python and Flask framework for the backend, and angularjs for the frontend
-UI is built following Material Design guidelines and using Angular Material, an angular module 
-that implements the Google Material Design
+Academic project developed for the course of Web Techologies.  
+Developed using python and Flask framework for the backend, and angularjs for the frontend.  
+UI is built following Material Design guidelines and using Angular Material, an angular module that implements the Google Material Design.
 
 # Usage
 
