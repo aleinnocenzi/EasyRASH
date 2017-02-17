@@ -30,6 +30,6 @@ Download get-pip.py (if you don't have pip already installed) from here: https:/
 `git clone https://github.com/aleinnocenzi/EasyRASH.git`  
 `cd ./EasyRASH`  
 `virtualenv --python python3 venv`  
-`. venv/bin/activate` 
+`. venv/bin/activate`  
 `pip install flask flask_mail flask_login passlib grip gunicorn`  
 `gunicorn --bind 0.0.0.0:10000 wsgi:app`   
