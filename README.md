@@ -9,7 +9,7 @@ simone.preite@studio.unibo.it
 EasyRASH is a peer review application developed to simplify the annotations of scientific articles written in RASH language.
 This web application provides all tools for a complete peer review process: from the submission of the article, to the reviews and to the final decision.
 
-## Technical details
+# Technical details
 
 Academic project developed for the course of Web Techologies.
 Developed using python and Flask framework for the backend, and angularjs for the frontend
