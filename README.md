@@ -19,8 +19,8 @@ that implements the Google Material Design
 # Usage
 
 Download get-pip.py (if you don't have pip already installed) from here: https://bootstrap.pypa.io/get-pip.py  
-*`cd /path/to/get-pip.py`  
-*`python get-pip.py` 
+* `cd /path/to/get-pip.py`  
+* `python get-pip.py` 
 
 ## Installation
 
