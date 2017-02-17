@@ -11,7 +11,7 @@ This web application provides all tools for a complete peer review process: from
 
 ## Technical details
 
-Academic project developer for the course of Web Techologies.
+Academic project developed for the course of Web Techologies.
 Developed using python and Flask framework for the backend, and angularjs for the frontend
 UI is built following Material Design guidelines and using Angular Material, an angular module 
 that implements the Google Material Design
@@ -30,4 +30,6 @@ Download get-pip.py (if you don't have pip already installed) from here: https:/
 `virtualenv --python python3 venv`  
 `. venv/bin/activate`  
 `pip install flask flask_mail flask_login passlib grip gunicorn`  
-`gunicorn --bind 0.0.0.0:10000 wsgi:app`   
+`gunicorn --bind 0.0.0.0:10000 wsgi:app`  
+
+Go to `localhost:10000` into the browser and enjoy EasyRASH 
